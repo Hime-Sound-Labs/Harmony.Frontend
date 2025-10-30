@@ -14,10 +14,10 @@ import Tonundrum from "./pages/tonundrum/Tonundrum.jsx";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/harmony" element={<Harmony />}></Route>
-        <Route path="/tonundrum" element={<Tonundrum />}></Route>
+      <Routes basename={import.meta.env.BASE_URL}>
+        <Route path={`${import.meta.env.BASE_URL}`} element={<Home />}></Route>
+        <Route path={`${import.meta.env.BASE_URL}/harmony`} element={<Harmony />}></Route>
+        <Route path={`${import.meta.env.BASE_URL}/tonundrum`} element={<Tonundrum />}></Route>
       </Routes>
     </>
   )
