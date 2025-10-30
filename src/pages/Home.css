@@ -1,0 +1,25 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+This Source Code Form is "Incompatible With Secondary Licenses", as
+defined by the Mozilla Public License, v. 2.0. */
+
+.card {
+  border: 1px solid var(--gray-2);
+  transition: border 240ms ease;
+}
+
+.card:hover {
+  border-color: var(--accent-8);
+}
+
+.link {
+  color: var(--gray-11);
+  transition: color 240ms ease;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--gray-12);
+}
