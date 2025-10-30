@@ -5,15 +5,15 @@
 // This Source Code Form is "Incompatible With Secondary Licenses", as
 // defined by the Mozilla Public License, v. 2.0.
 
-import {Text, Flex, Card, Grid} from "@radix-ui/themes";
+import {Text, Flex, Card, Grid, Box, Link as Link} from "@radix-ui/themes";
 import './Home.css'
-import {Link} from "react-router";
+import {Link as ReactLink} from "react-router";
 
 function Home() {
   return (
-    <Flex justify="center" align="center" width="100%" height="80vh" className="bg-gradient">
+    <Flex justify="center" align="center" width="100%" height="100vh" className="bg-gradient" direction="column">
       <Grid columns="2" gap="9"  maxWidth="60vw" justify="center">
-        <Link to="/harmony" className="link">
+        <ReactLink to="/harmony" className="link">
           <Card size="3" className="card">
             <Flex justify="center" direction="column" gap="6">
               <Text as="p" size="5" align="center">
@@ -24,8 +24,8 @@ function Home() {
               </Text>
             </Flex>
           </Card>
-        </Link>
-        <Link to="/tonundrum" className="link">
+        </ReactLink>
+        <ReactLink to="/tonundrum" className="link">
           <Card size="3" className="card">
             <Flex justify="center" direction="column" gap="6">
               <Text as="p" size="5" align="center">
@@ -36,8 +36,14 @@ function Home() {
               </Text>
             </Flex>
           </Card>
-        </Link>
+        </ReactLink>
       </Grid>
+      <Box pt="6rem">
+        <Text as="p" size="1" align="center" color="gray">
+          All content is available under the <Link href="https://creativecommons.org/publicdomain/zero/1.0/legalcode">Creative Commons CC0 1.0 Universal License</Link>.<br/>
+          <Link href="https://github.com/Hime-Sound-Labs" target="_blank">Source code</Link> is licensed separately under <Link href="https://spdx.org/licenses/MPL-2.0-no-copyleft-exception.html">Mozilla Public License 2.0 (no copyleft exception)</Link>.
+        </Text>
+      </Box>
     </Flex>
   )
 }
